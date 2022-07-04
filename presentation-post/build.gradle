@@ -42,6 +42,7 @@ android {
 
 dependencies {
     implementation(project(path: ":domain"))
+    implementation(project(path: ":presentation-cmn"))
     implementation coroutines.coroutinesAndroid
     implementation androidx.composeUi
     implementation androidx.composeMaterial

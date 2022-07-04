@@ -1,4 +1,4 @@
-package com.tolulonge.presentation_post.list
+package com.tolulonge.presentation_cmn.state
 
 sealed class UiState<out T : Any> {
     object Loading : UiState<Nothing>()

@@ -1,8 +1,11 @@
 package com.tolulonge.presentation_post.list
 
+import com.tolulonge.domain.entity.Interaction
+
 data class PostListModel(
     val headerText: String = "",
-    val items: List<PostListItemModel> = listOf()
+    val items: List<PostListItemModel> = listOf(),
+    val interaction: Interaction
 )
 
 data class PostListItemModel(

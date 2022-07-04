@@ -54,6 +54,8 @@ dependencies {
     implementation(project(path: ":data-remote"))
     implementation(project(path: ":data-local"))
     implementation(project(path: ":data-repository"))
+    implementation(project(path: ":presentation-usr"))
+    implementation(project(path: ":presentation-cmn"))
     implementation androidx.core
     implementation androidx.appCompat
     implementation material.material
