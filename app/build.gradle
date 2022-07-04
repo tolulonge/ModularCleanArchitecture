@@ -14,8 +14,11 @@ android {
         targetSdk defaultTargetSdkVersion
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.tolulonge.modularcleanarchitecture.PostAppTestRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+        testOptions {
+            execution 'ANDROIDX_TEST_ORCHESTRATOR'
+        }
         vectorDrawables {
             useSupportLibrary true
         }
@@ -69,4 +72,15 @@ dependencies {
     implementation di.hiltAndroid
     kapt di.hiltCompiler
     testImplementation test.junit
+    androidTestImplementation androidTest.junit
+    androidTestImplementation androidTest.espressoCore
+    androidTestImplementation androidTest.idlingResource
+    androidTestImplementation androidTest.core
+    androidTestImplementation androidTest.rules
+    androidTestImplementation androidTest.runner
+    androidTestImplementation androidTest.hilt
+    kaptAndroidTest androidTest.hiltCompiler
+    androidTestImplementation androidTest.composeUiTestJunit
+    debugImplementation androidTest.composeManifest
+    androidTestUtil androidTest.orchestrator
 }
