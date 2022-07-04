@@ -1,8 +1,6 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -34,8 +32,6 @@ android {
 
 dependencies {
     implementation coroutines.coroutinesAndroid
-    implementation di.hiltAndroid
-    kapt di.hiltCompiler
     testImplementation test.junit
     testImplementation test.coroutines
     testImplementation test.mockito

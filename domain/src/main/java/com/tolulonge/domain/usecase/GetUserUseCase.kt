@@ -4,9 +4,8 @@ import com.tolulonge.domain.entity.User
 import com.tolulonge.domain.repository.UserRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import javax.inject.Inject
 
-class GetUserUseCase @Inject constructor(
+class GetUserUseCase (
     configuration: Configuration,
     private val userRepository: UserRepository
 ) : UseCase<GetUserUseCase.Request, GetUserUseCase.Response>(configuration) {

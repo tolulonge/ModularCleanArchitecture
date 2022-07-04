@@ -6,9 +6,8 @@ import com.tolulonge.domain.entity.User
 import com.tolulonge.domain.repository.UserRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.onEach
-import javax.inject.Inject
 
-class UserRepositoryImpl @Inject constructor(
+class UserRepositoryImpl  constructor(
     private val remoteUserDataSource: RemoteUserDataSource,
     private val localUserDataSource: LocalUserDataSource
 ) : UserRepository {
